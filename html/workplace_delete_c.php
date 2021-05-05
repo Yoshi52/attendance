@@ -11,7 +11,7 @@ if(is_logined() === false){
 }
 
 $db = get_db_connect();
-$user_id = get_session('user_id');
+$user_id = get_session('user');
 $workplaces = select_workplace($db, $user_id);
 
 if(isset($_POST['delete_workplace'])) {

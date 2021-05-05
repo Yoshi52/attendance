@@ -26,8 +26,9 @@ if(!empty($duplicate_email)){
 
 if (empty($_SESSION['errors'])) {
     insert_user($db, $user_id, $email);
-    set_session('user_id', $user_id);
+    set_session('user', $user_id);
     set_message('ユーザー登録が完了しました。');
+    set_message('ログインしました。');
     redirect_to(HOME_URL);
 } else {
     set_error('ユーザー登録に失敗しました。');

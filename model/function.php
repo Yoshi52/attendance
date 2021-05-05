@@ -69,7 +69,7 @@ function get_messages(){
 }
 
 function is_logined() {
-    return get_session('user_id') !== '';
+    return get_session('user') !== '';
 }
 
 function is_alphanumeric($string) {

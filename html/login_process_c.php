@@ -16,7 +16,7 @@ $login_check = select_user($db, $user_id, $email);
 
 
 if(!empty($login_check) === TRUE) {
-    set_session('user_id', $user_id);
+    set_session('user', $user_id);
     $main_workplace = select_main_workplace($db, $user_id);
     $now_workplace = select_now_workplace($db, $user_id);
     if(!empty($main_workplace)) {

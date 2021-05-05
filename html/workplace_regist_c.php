@@ -11,7 +11,7 @@ if(is_logined() === false){
 }
 
 $db = get_db_connect();
-$user_id = get_session('user_id');
+$user_id = get_session('user');
 $workplace_name = get_post('workplace_name');
 $mid_sta = date(get_post('mid_sta') . ':00:00');
 $mid_fin = date(get_post('mid_fin') . ':00:00');

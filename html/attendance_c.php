@@ -11,7 +11,7 @@ if(is_logined() === false){
 }
 
 $db = get_db_connect();
-$user_id = get_session('user_id');
+$user_id = get_session('user');
 $is_start_work = is_start_work($db, $user_id);
 $attendance = select_attendance($db, $user_id);
 $main_workplace = select_main_workplace($db, $user_id);

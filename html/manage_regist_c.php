@@ -13,7 +13,7 @@ if(is_logined() === false){
 }
 
 $db = get_db_connect();
-$user_id = get_session('user_id');
+$user_id = get_session('user');
 
 $workplace = get_post('workplace');
 $workplace_info = check_duplicate_workplace_name($db, $user_id, $workplace);

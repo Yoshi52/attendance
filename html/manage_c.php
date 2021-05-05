@@ -12,7 +12,7 @@ if(is_logined() === false){
 }
 
 $db = get_db_connect();
-$user_id = get_session('user_id');
+$user_id = get_session('user');
 
 $my_workplace = select_workplace($db, $user_id);
 
